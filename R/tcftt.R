@@ -1,0 +1,26 @@
+#' tcftt: Two-Sample Tests for Skewed Data
+#'
+#' The classical two-sample t-test only fit for the normal data.
+#' The tcfu() and tt() tests implemented in this package are suitable for
+#' testing the equality of two-sample means for the populations having
+#' unequal variances. When the populations are not normally distributed,
+#' these tests can provide more power than a large-sample t-test using normal
+#' approximation, especially when the sample sizes are moderate. The tcfu()
+#' uses the Cornish-Fisher expansion to achieve a better approximation to the
+#' true percentiles. The tt() transforms the Welch's t-statistic so that the
+#' sampling distribution become more symmetric. More technical details please
+#' refer to Zhang (2019) <http://hdl.handle.net/2097/40235>.
+#'
+#'
+#' @section tcftt functions:
+#' The function `tcfu()` implements the Cornish-Fisher based two-sample test (TCFU)
+#' and `tt()` implements the transformation based two-sample test (TT).
+#' The function `edgeworth()` provides the Edgeworth expansion for
+#' cumulative density function the Welch's t-statistic, and `cornish_fisher()`
+#' provides the Cornish-Fisher expansion for the percentiles.
+#' The functions `adjust_power()` and `pauc()` provide power adjustment methods
+#' for simulation studies.
+#'
+#' @docType package
+#' @name tcftt
+NULL

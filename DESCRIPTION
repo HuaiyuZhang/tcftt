@@ -1,11 +1,22 @@
 Package: tcftt
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Two-Sample Tests for Skewed Data
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Huaiyu Zhang, Haiyan Wang
+Maintainer: Huaiyu Zhang <huaiyuzhang1988@gmail.com>
+Description: The classical two-sample t-test only fit for the normal data.
+    The tcfu() and tt() tests implemented in this package are suitable for 
+    testing the equality of two-sample means for the populations having 
+    unequal variances. When the populations are not normally distributed,
+    these tests can provide more power than a large-sample t-test using normal
+    approximation, especially when the sample sizes are moderate. The tcfu() 
+    uses the Cornish-Fisher expansion to achieve a better approximation to the 
+    true percentiles. The tt() transforms the Welch's t-statistic so that the 
+    sampling distribution become more symmetric. More technical details please 
+    refer to Zhang (2019) <http://hdl.handle.net/2097/40235>.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.0
+Depends: R (>= 3.1.0)
+Imports: stats
