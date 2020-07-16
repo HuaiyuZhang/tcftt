@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{pauc}
 \alias{pauc}
-\title{Power-adjustment: non-parametric estimation of the ROC curve}
+\title{Power-adjustment based on non-parametric estimation of the ROC curve}
 \usage{
 pauc(stat_h0, stat_ha, target_range_lower, target_range_upper)
 }
@@ -20,12 +20,12 @@ the adjusted power.
 }
 \description{
 It is common to use Monte Carlo experiments to evaluate the performance of
-hypothesis tests and horizontally compare the empirical power among competing
+hypothesis tests and compare the empirical power among competing
 tests. High power is desirable but difficulty arises when the actual sizes of
 competing tests are not comparable. A possible way of tackling this issue is
 to adjust the empirical power according to the actual size. This function
 implements the "method 2: non-parametric estimation of the ROC curve" in
-Lloyd (2005). More details please refer to the paper.
+Lloyd (2005). For more details, please refer to the paper.
 }
 \examples{
 stath0 <- rnorm(100)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{boot_test}
 \alias{boot_test}
-\title{Bootstrapping two-sample t-test}
+\title{Bootstrap_t test for two-sample comparisons}
 \usage{
 boot_test(x1, x2, B = 1000, alternative = "greater")
 }
@@ -16,10 +16,11 @@ boot_test(x1, x2, B = 1000, alternative = "greater")
 \item{alternative}{the alternative hypothesis: "greater" for upper-tailed, "less" for lower-tailed, and "two.sided" for two-sided alternative.}
 }
 \value{
-the p-value of the bootstrap test.
+the p-value of the bootstrap_t test.
 }
 \description{
-Bootstrapping two-sample t-test
+This function provides bootstrap approximation to the sampling distribution of the the
+Welch's t-statistic
 }
 \examples{
 x1 <- rnorm(100, 0, 1)

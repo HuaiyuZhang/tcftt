@@ -17,24 +17,44 @@ tt(x1, x2, alternative = "greater", effectSize = 0, alpha = 0.05, type = 1)
 
 \item{alpha}{the significance level. The default value is 0.05.}
 
-\item{type}{the type of transformation to be used. Possible choices are 1 to 4. Details please refer to Zhang and Wang (2020).}
+\item{type}{the type of transformation to be used. Possible choices are 1 to 4. They correspond to the TT1 to TT4 in Zhang and Wang (2020).
+Which type provides the best test depends on the relative skewness parameter A in Theorem 2.2 of Zhang and Wang (2020).
+In general, if A is greater than 3, \code{type} =3 is recommended. Otherwise, \code{type}=1 or 4 is recommended. The \code{type}=2
+transformation may be more conservative in some cases and more liberal in some other cases than the \code{type}=1 and 4 transformations.   For more details, please refer to Zhang and Wang (2020).}
 }
 \value{
 test statistic, critical value, p-value, reject decision at the given significance level.
 }
 \description{
-This two-sample test is suitable for testing the equality of
+This test is suitable for testing the equality of
 two-sample means for the populations having unequal variances.
-When the populations are not normally distributed, this test
-can provide more power than a large-sample t-test using normal
-approximation. This test transforms the Welch's t-statistic by
-functions which can make the sampling distribution more symmetric.
-More details please refer to Zhang and Wang (2020).
+When the populations are not normally distributed, the sampling distribution of
+the Welch's t-statistic may be skewed. This test conducts transformations
+of the Welch's t-statistic to make the sampling distribution more symmetric.
+For more details, please refer to Zhang and Wang (2020).
 }
 \examples{
 x1 <- rnorm(20, 1, 3)
 x2 <- rnorm(21, 2, 3)
 tt(x1, x2, alternative = 'two.sided', type = 1)
+
+#Negative lognormal versus normal data
+ n1=50;  n2=33
+ x1 = -rlnorm(n1, meanlog = 0, sdlog = sqrt(1)) -0.3*sqrt((exp(1)-1)*exp(1))
+ x2 = rnorm(n2, -exp(1/2), 0.5)
+ tt(x1, x2, alternative = 'less', type = 1)
+ tt(x1, x2, alternative = 'less', type = 2)
+ tt(x1, x2, alternative = 'less', type = 3)
+ tt(x1, x2, alternative = 'less', type = 4)
+
+#Lognormal versus normal data
+ n1=50;  n2=33
+ x1 = rlnorm(n1, meanlog = 0, sdlog = sqrt(1)) + 0.3*sqrt((exp(1)-1)*exp(1))
+ x2 = rnorm(n2, exp(1/2), 0.5)
+ tt(x1, x2, alternative = 'greater', type = 1)
+ tt(x1, x2, alternative = 'greater', type = 2)
+ tt(x1, x2, alternative = 'greater', type = 3)
+ tt(x1, x2, alternative = 'greater', type = 4)
 }
 \references{
 Zhang, H. and Wang, H. (2020). Transformation tests and their asymptotic power in two-sample comparisons Manuscript in review.

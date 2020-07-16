@@ -23,12 +23,13 @@ tcfu(x1, x2, effectSize = 0, alternative = "greater", alpha = 0.05, order = 2)
 test statistic, critical value, p-value, reject decision at the given significance level.
 }
 \description{
-This two-sample test is suitable for testing the equality of
+This test is suitable for testing the equality of
 two-sample means for the populations having unequal variances.
 When the populations are not normally distributed, this test
-can provide more power than a large-sample t-test using normal
+can provide better type I error control and more accurate power than a large-sample t-test using normal
 approximation. The critical values of the test are computed based on the
-Cornish-Fisher expansion of the Welch's t-statistic. More details
+Cornish-Fisher expansion of the Welch's t-statistic. The order of the
+Cornish-Fisher expansion is allowed to be 0, 1, or 2. More details
 please refer to Zhang and Wang (2020).
 }
 \examples{
@@ -37,5 +38,5 @@ x2 <- rnorm(21, 2, 3)
 tcfu(x1, x2, alternative = 'two.sided')
 }
 \references{
-Zhang, H. and Wang, H. (2020). Transformation tests and their asymptotic power in two-sample comparisons Manuscript in review.
+Zhang, H. and Wang, H. (2020). Transformation tests and their asymptotic power in two-sample comparisons. Manuscript in review.
 }

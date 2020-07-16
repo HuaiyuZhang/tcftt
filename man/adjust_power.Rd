@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{adjust_power}
 \alias{adjust_power}
-\title{Adjust power to actual size}
+\title{Adjusting power to assure actual size is within significance level}
 \usage{
 adjust_power(size, power, method = "ZW")
 }
@@ -19,7 +19,7 @@ the power value after adjustment.
 }
 \description{
 It is common to use Monte Carlo experiments to evaluate the performance of
-hypothesis tests and horizontally compare the empirical power among competing
+hypothesis tests and compare the empirical power among competing
 tests. High power is desirable but difficulty arises when the actual sizes of
 competing tests are not comparable. A possible way of tackling this issue is
 to adjust the empirical power according to the actual size. This function

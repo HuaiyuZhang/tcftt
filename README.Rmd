@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The classical two-sample t-test only fit for the normal data.
+The classical two-sample t-test only fits for the normal data.
 The tcfu() and tt() tests implemented in this package are suitable for 
 testing the equality of two-sample means for the populations having 
 unequal variances. When the populations are not normally distributed,
@@ -53,6 +53,6 @@ tt(x1, x2, alternative = 'less')
 
 The function `tcfu()` implements the Cornish-Fisher based two-sample test (TCFU) and `tt()` implements the transformation based two-sample test (TT). 
 
-The function `edgeworth()` provides the Edgeworth expansion for cumulative density function the Welch's t-statistic, and `cornish_fisher()` provides the Cornish-Fisher expansion for the percentiles.  
+The function `t_edgeworth()` provides the Edgeworth expansion of the cumulative density function for the Welch's t-statistic, and `t_cornish_fisher()` provides the Cornish-Fisher expansion for its percentiles.  
 
 The functions `adjust_power()` and `pauc()` provide power adjustment methods for simulation studies.

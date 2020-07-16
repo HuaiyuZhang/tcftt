@@ -2,8 +2,8 @@
 
 export(adjust_power)
 export(boot_test)
-export(cornish_fisher)
-export(edgeworth)
 export(pauc)
+export(t_cornish_fisher)
+export(t_edgeworth)
 export(tcfu)
 export(tt)
