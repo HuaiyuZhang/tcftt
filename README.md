@@ -16,8 +16,7 @@ normal approximation, especially when the sample sizes are moderate. The
 tcfu() uses the Cornish-Fisher expansion to achieve a better
 approximation to the true percentiles. The tt() transforms the Welch’s
 t-statistic so that the sampling distribution become more symmetric.
-More technical details please refer to Zhang (2019)
-<http://hdl.handle.net/2097/40235>.
+More technical details please refer to [Zhang (2019)](http://hdl.handle.net/2097/40235) and [Zhang and Wang (2021)](https://www.tandfonline.com/doi/abs/10.1080/10485252.2021.1982938).
 
 ## Installation
 
